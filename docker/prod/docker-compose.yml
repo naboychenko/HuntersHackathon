@@ -1,0 +1,23 @@
+version: '2'
+services:
+  configserver:
+    extends:
+      file: ../common/docker-compose.yml
+      service: configservice
+  database:
+    extends:
+      file: ../common/docker-compose.yml
+      service: database
+    environment:
+      POSTGRES_USER: "postgres_prod"
+      POSTGRES_PASSWORD:  "p0stgr@s_prod"
+      POSTGRES_DB: "prod"
+  patientserver:
+    extends:
+      service: patientservice
+      file: ../common/docker-compose.yml
+    environment:
+      PROFILE: "prod"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT:   "8888"
+      DATABASESERVER_PORT: "5432"

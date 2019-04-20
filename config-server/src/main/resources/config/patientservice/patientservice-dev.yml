@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    platform: "postgres"
+    url: "jdbc:postgresql://database:5432/dev"
+    username: "postgres_dev"
+    password: "p0stgr@s_dev"
+    testWhileIdle: "true"
+    validationQuery: "SELECT 1"
+  database:
+    driverClassName: "org.postgresql.Driver"
+  jpa:
+    database: "POSTGRESQL"
+    show-sql: "false"
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.PostgreSQLDialect"
+redis:
+  server: "redis"
+  port: "6379"
+signing:
+  key: "345345fsdfsf5345"

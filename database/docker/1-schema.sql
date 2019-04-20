@@ -1,0 +1,9 @@
+CREATE TABLE patient (
+  patient_id CHARACTER VARYING(255) PRIMARY KEY,
+  organization_id CHARACTER VARYING(255) NOT NULL,
+  product_name CHARACTER VARYING(255) NOT NULL,
+  patient_type CHARACTER VARYING(255) NOT NULL,
+  patient_max INTEGER NOT NULL,
+  patient_allocated INTEGER NOT NULL,
+  comment CHARACTER VARYING(255)
+);
