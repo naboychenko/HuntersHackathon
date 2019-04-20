@@ -38,7 +38,7 @@ public class PatientServiceController {
         patientService.updatePatient(identifier, patient);
     }
 
-    @DeleteMapping("/{identifier")
+    @DeleteMapping("/{identifier}")
     public void deletePatient(@PathVariable String identifier) {
         patientService.deletePatient(identifier);
     }

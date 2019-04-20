@@ -11,4 +11,6 @@ public interface DoctorRepository extends CrudRepository<Doctor, String> {
     List<Doctor> findAllByName(String name);
 
     List<Doctor> findAll();
+
+    Doctor findByIdentifier(String identifier);
 }

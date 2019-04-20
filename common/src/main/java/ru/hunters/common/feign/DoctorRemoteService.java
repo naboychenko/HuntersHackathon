@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "doctor-service", path ="/doctors")
+@FeignClient(value = "doctorservice", path ="/v1/doctors")
 public interface DoctorRemoteService {
 
     @GetMapping
