@@ -1,11 +1,11 @@
 example:
-  property: "I AM A PROD PROPERTY OVERRIDE"
+  property: "I AM IN THE DEFAULT"
 spring:
   datasource:
     platform: "postgres"
-    url: "jdbc:postgresql://database:5432/prod"
-    username: "postgres_prod"
-    password: "p0stgr@s_prod"
+    url: "jdbc:postgresql://database:5432/local"
+    username: "postgres_local"
+    password: "{cipher}e493c4760a1db83016688c8060a32d3cffe7a6105c094a4332ab7ea3a1182c74"
     testWhileIdle: "true"
     validationQuery: "SELECT 1"
   database:
@@ -16,8 +16,3 @@ spring:
     properties:
       hibernate:
         dialect: "org.hibernate.dialect.PostgreSQLDialect"
-redis:
-  server: "redis"
-  port: "6379"
-signing:
-  key: "345345fsdfsf5345"
