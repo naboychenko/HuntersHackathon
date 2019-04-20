@@ -1,4 +1,4 @@
-package ru.hunters.patientservice.model;
+package ru.hunters.organizationservice.model;
 
 import lombok.*;
 
@@ -9,8 +9,8 @@ import javax.persistence.Table;
 
 @Entity
 @Data
-@Table(name = "patient")
-public class Patient {
+@Table(name = "organization")
+public class Organization {
 
     @Id
     @Column(name = "identifier", nullable = false)

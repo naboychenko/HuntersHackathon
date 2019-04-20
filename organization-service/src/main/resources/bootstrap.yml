@@ -1,6 +1,6 @@
 spring:
   application:
-    name: patientservice
+    name: organizationservice
   profiles:
     active:
       default
