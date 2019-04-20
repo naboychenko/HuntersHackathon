@@ -26,4 +26,4 @@ java -Djava.security.egd=file:/dev/./urandom -Dserver.port=$SERVER_PORT   \
      -Deureka.client.serviceUrl.defaultZone=$EUREKASERVER_URI             \
      -Dspring.cloud.config.uri=$CONFIGSERVER_URI                          \
      -Dspring.profiles.active=$PROFILE                                    \
-     -jar /usr/local/patient-service/@project.build.finalName@.jar
+     -jar /usr/local/doctor-service/@project.build.finalName@.jar

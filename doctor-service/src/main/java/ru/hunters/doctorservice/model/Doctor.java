@@ -1,4 +1,4 @@
-package ru.hunters.patientservice.model;
+package ru.hunters.doctorservice.model;
 
 import lombok.*;
 
@@ -10,11 +10,11 @@ import javax.persistence.Table;
 @Entity
 @Data
 @Table(name = "patient")
-public class Patient {
+public class Doctor {
 
     @Id
-    @Column(name = "identifier", nullable = false)
-    private String identifier;
+    @Column(name = "id", nullable = false)
+    private String id;
 
     @Column(name = "name", nullable = false)
     private String name;
