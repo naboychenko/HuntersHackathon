@@ -7,7 +7,7 @@ import ru.hunters.patientservice.services.PatientService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/organizations/{organizationId}/patients")
+@RequestMapping("/v1/patients")
 public class PatientServiceController {
 
     private final PatientService patientService;
@@ -17,36 +17,29 @@ public class PatientServiceController {
     }
 
     @GetMapping
-    public List<Patient> getOrganizationPatients(@PathVariable String organizationId) {
-        return patientService.getPatientsByOrganization(organizationId);
+    public List<Patient> getPatientsByName(@RequestParam String name) {
+        return patientService.getPatientsByName(name);
     }
 
-    @GetMapping("/{patientId}")
-    public Patient getOrganizationPatient(
-            @PathVariable String organizationId,
-            @PathVariable String patientId) {
-        return patientService.getPatientByOrganizationIdAndPatientId(organizationId, patientId);
+    @GetMapping("/{identifier}")
+    public Patient getPatientByIdentifier(@PathVariable String identifier) {
+        return patientService.getPatientByIdentifier(identifier);
     }
 
     @PostMapping
-    public void savePatient(
-            @PathVariable String organizationId,
-            @RequestBody Patient patient) {
-        patientService.savePatient(organizationId, patient);
+    public void savePatient(@RequestBody Patient patient) {
+        patientService.savePatient(patient);
     }
 
-    @PutMapping("/{patientId}")
+    @PutMapping("/{identifier}")
     public void updatePatient(
-            @PathVariable String organizationId,
-            @PathVariable String patientId,
+            @PathVariable String identifier,
             @RequestBody Patient patient) {
-        patientService.updatePatient(organizationId, patientId, patient);
+        patientService.updatePatient(identifier, patient);
     }
 
-    @DeleteMapping("/{patientId")
-    public void deletePatient(
-            @PathVariable String organizationId,
-            @PathVariable String patientId) {
-        patientService.deletePatient(organizationId, patientId);
+    @DeleteMapping("/{identifier")
+    public void deletePatient(@PathVariable String identifier) {
+        patientService.deletePatient(identifier);
     }
 }
