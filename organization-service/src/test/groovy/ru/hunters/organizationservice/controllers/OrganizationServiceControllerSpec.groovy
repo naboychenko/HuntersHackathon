@@ -4,9 +4,8 @@ import org.spockframework.spring.SpringBean
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.test.web.servlet.MockMvc
+import ru.hunters.organizationservice.model.Organization
 import ru.hunters.organizationservice.services.OrganizationService
-import ru.hunters.patientservice.model.Patient
-import ru.hunters.patientservice.services.PatientService
 import spock.lang.Specification
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
@@ -26,7 +25,7 @@ class OrganizationServiceControllerSpec extends Specification {
 
         given:
         def organization = new Organization()
-        organization.setOrganizationId("123")
+        organization.setIdentifier("123")
         organizationService.getOrganizationByIdentifier(_ as String) >> organization
         when: "getOrganizationByIdentifier method is invoked"
         def result = mockMvc.perform(
@@ -36,6 +35,6 @@ class OrganizationServiceControllerSpec extends Specification {
         result.andExpect(status().isOk())
 
         and:
-        result.andExpect(jsonPath('$.organizationId').value('123'))
+        result.andExpect(jsonPath('$.identifier').value('123'))
     }
 }
