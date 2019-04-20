@@ -25,18 +25,16 @@ class PatientServiceControllerSpec extends Specification {
 
         given:
         def patient = new Patient()
-        patient.setPatientId("123")
-        patient.setOrganizationId("abc")
-        patientService.getPatientByOrganizationIdAndPatientId(_ as String, _ as String) >> patient
+        patient.setIdentifier("123")
+        patientService.getPatientByIdentifier(_ as String) >> patient
         when: "getPatient method is invoked"
         def result = mockMvc.perform(
-                get('/v1/organizations/{organizationId}/patients/{patientId}', "abc", "123"))
+                get('/v1/patients/{identifier}', "123"))
 
         then: "valid filters should be returned"
         result.andExpect(status().isOk())
 
         and:
-        result.andExpect(jsonPath('$.patientId').value('123'))
-        result.andExpect(jsonPath('$.organizationId').value('abc'))
+        result.andExpect(jsonPath('$.identifier').value('123'))
     }
 }
