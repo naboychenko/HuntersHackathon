@@ -1,9 +1,9 @@
 package ru.hunters.doctorservice.services.impl;
 
+import ru.hunters.common.domain.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.hunters.doctorservice.config.ServiceConfig;
-import ru.hunters.doctorservice.model.Doctor;
 import ru.hunters.doctorservice.repository.DoctorRepository;
 
 import java.util.List;

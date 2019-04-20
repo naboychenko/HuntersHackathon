@@ -1,12 +1,11 @@
 package ru.hunters.organizationservice.services;
 
+import ru.hunters.common.domain.Organization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.hunters.organizationservice.config.ServiceConfig;
-import ru.hunters.organizationservice.model.Organization;
 import ru.hunters.organizationservice.repository.OrganizationRepository;
 
-import java.util.List;
 import java.util.UUID;
 
 @Service

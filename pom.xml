@@ -13,10 +13,10 @@
         <module>discovery-server</module>
         <module>config-server</module>
         <module>database</module>
-        <module>nginx-server</module>
         <module>patient-service</module>
         <module>doctor-service</module>
         <module>organization-service</module>
+        <module>common</module>
 
     </modules>
 

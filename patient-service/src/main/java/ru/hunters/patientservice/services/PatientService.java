@@ -1,9 +1,9 @@
 package ru.hunters.patientservice.services;
 
+import ru.hunters.common.domain.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.hunters.patientservice.config.ServiceConfig;
-import ru.hunters.patientservice.model.Patient;
 import ru.hunters.patientservice.repository.PatientRepository;
 
 import java.util.List;

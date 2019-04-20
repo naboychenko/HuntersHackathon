@@ -1,7 +1,7 @@
 package ru.hunters.doctorservice.services;
 
+import ru.hunters.common.domain.Doctor;
 import java.util.List;
-import ru.hunters.doctorservice.model.Doctor;
 
 public interface DoctorService
 {

@@ -1,11 +1,10 @@
-package ru.hunters.patientservice.model;
-
-import lombok.*;
+package ru.hunters.common.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Data

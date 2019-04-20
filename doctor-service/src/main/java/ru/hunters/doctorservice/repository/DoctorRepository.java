@@ -1,8 +1,8 @@
 package ru.hunters.doctorservice.repository;
 
+import ru.hunters.common.domain.Doctor;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import ru.hunters.doctorservice.model.Doctor;
 
 import java.util.List;
 
