@@ -1,5 +1,6 @@
-package ru.hunters.patientservice.model;
+package ru.hunters.doctorservice.model;
 
+import javax.persistence.GeneratedValue;
 import lombok.*;
 
 import javax.persistence.Column;
@@ -9,8 +10,13 @@ import javax.persistence.Table;
 
 @Entity
 @Data
-@Table(name = "patient")
-public class Patient {
+@Table(name = "doctor")
+public class Doctor {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "id", nullable = false)
+    private String id;
 
     @Id
     @Column(name = "identifier", nullable = false)
