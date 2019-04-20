@@ -17,8 +17,7 @@ public class Doctor {
     @GeneratedValue
     @Column(name = "id", nullable = false)
     private String id;
-
-    @Id
+    
     @Column(name = "identifier", nullable = false)
     private String identifier;
 

@@ -2,10 +2,7 @@ package ru.hunters.organizationservice.model;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -13,6 +10,10 @@ import javax.persistence.Table;
 public class Organization {
 
     @Id
+    @GeneratedValue
+    @Column(name = "id", nullable = false)
+    private String id;
+
     @Column(name = "identifier", nullable = false)
     private String identifier;
 

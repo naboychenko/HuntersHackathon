@@ -36,10 +36,10 @@ services:
   organizationservice:
     image: hunters/organization-service:first
     ports:
-      - "8081:8080"
+      - "8081:8081"
     environment:
       PROFILE: "default"
-      SERVER_PORT: "8080"
+      SERVER_PORT: "8081"
       EUREKASERVER_URI: "http://discoveryserver:8761/eureka/"
       EUREKASERVER_PORT: "8761"
       CONFIGSERVER_URI: "http://configserver:8888"
@@ -49,10 +49,10 @@ services:
   doctorservice:
     image: hunters/doctor-service:first
     ports:
-      - "8082:8080"
+      - "8082:8082"
     environment:
       PROFILE: "default"
-      SERVER_PORT: "8080"
+      SERVER_PORT: "8082"
       EUREKASERVER_URI: "http://discoveryserver:8761/eureka/"
       EUREKASERVER_PORT: "8761"
       CONFIGSERVER_URI: "http://configserver:8888"
