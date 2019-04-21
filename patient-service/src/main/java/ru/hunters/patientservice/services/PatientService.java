@@ -16,6 +16,9 @@ public class PatientService {
     private final ServiceConfig serviceConfig;
 
     @Autowired
+    private EocService eocService;
+
+    @Autowired
     public PatientService(
             PatientRepository patientRepository,
             ServiceConfig serviceConfig) {
@@ -43,5 +46,9 @@ public class PatientService {
     public void deletePatient(String identifier) {
         Patient patient = patientRepository.findByIdentifier(identifier);
         patientRepository.delete(patient);
+    }
+
+    public List<Patient> getPatientsByOrganization(String organizationId) {
+        return eocService.getPatientsByOrganization(organizationId);
     }
 }

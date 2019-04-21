@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.hunters.common.domain.Patient;
 import ru.hunters.organizationservice.services.OrganizationService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1/organizations")
@@ -49,5 +52,11 @@ public class OrganizationServiceController {
     public void deletePatient(
             @PathVariable String identifier) {
         organizationService.deleteOrganization(identifier);
+    }
+
+    @GetMapping("/{organizationId}/patients")
+    public List<Patient> getAllPatients(
+            @PathVariable String organizationId) {
+        return organizationService.getAllPatients(organizationId);
     }
 }
