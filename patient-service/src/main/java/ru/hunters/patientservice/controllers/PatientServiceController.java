@@ -51,7 +51,7 @@ public class PatientServiceController {
         patientService.deletePatient(identifier);
     }
 
-    @GetMapping("/{organizationId}")
+    @GetMapping("/byOrganization/{organizationId}")
     public List<Patient> getPatientsByOrganization(@PathVariable String organizationId) {
         return patientService.getPatientsByOrganization(organizationId);
     }

@@ -13,6 +13,6 @@ public interface PatientRemoteService {
     @GetMapping("/{identifier}")
     Patient getPatientByIdentifier(@PathVariable String identifier);
 
-    @GetMapping("/{organizationId}")
+    @GetMapping("/byOrganization/{organizationId}")
     List<Patient> getPatientsByOrganization(@PathVariable String organizationId);
 }
