@@ -20,7 +20,7 @@ public class EpisodeOfCare {
     @Column(name = "id", nullable = false)
     private String id;
 
-    @Column(name = "id", nullable = false)
+    @Column(name = "identifier", nullable = false)
     private String identifier;
 
     @Column(name = "timestamp", nullable = false)
