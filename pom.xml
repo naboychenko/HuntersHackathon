@@ -16,6 +16,7 @@
         <module>patient-service</module>
         <module>doctor-service</module>
         <module>organization-service</module>
+        <module>common</module>
 
     </modules>
 

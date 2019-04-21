@@ -1,7 +1,7 @@
 package ru.hunters.patientservice.controllers;
 
+import ru.hunters.common.domain.Patient;
 import org.springframework.web.bind.annotation.*;
-import ru.hunters.patientservice.model.Patient;
 import ru.hunters.patientservice.services.PatientService;
 
 import java.util.List;
@@ -38,7 +38,7 @@ public class PatientServiceController {
         patientService.updatePatient(identifier, patient);
     }
 
-    @DeleteMapping("/{identifier")
+    @DeleteMapping("/{identifier}")
     public void deletePatient(@PathVariable String identifier) {
         patientService.deletePatient(identifier);
     }
