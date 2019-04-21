@@ -23,4 +23,10 @@ public class Doctor {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "issuer", nullable = false)
+    private String issuer;
+
+    @Column(name = "qualification", nullable = false)
+    private String qualification;
 }
