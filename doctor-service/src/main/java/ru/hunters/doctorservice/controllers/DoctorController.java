@@ -7,7 +7,7 @@ import ru.hunters.doctorservice.services.DoctorService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/doctors/")
+@RequestMapping("/v1/doctors")
 public class DoctorController {
 
     private final DoctorService doctorService;

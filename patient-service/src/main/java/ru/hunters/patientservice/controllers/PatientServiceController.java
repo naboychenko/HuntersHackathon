@@ -17,8 +17,8 @@ public class PatientServiceController {
     }
 
     @GetMapping
-    public List<Patient> getPatientsByName(@RequestParam String name) {
-        return patientService.getPatientsByName(name);
+    public List<Patient> getPatientsByName() {
+        return patientService.getPatients();
     }
 
     @GetMapping("/{identifier}")

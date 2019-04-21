@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface PatientRepository extends CrudRepository<Patient, String> {
     Patient findByIdentifier(String identifier);
-    List<Patient> findAllByName(String name);
+    List<Patient> findAll();
 }

@@ -23,8 +23,8 @@ public class PatientService {
         this.serviceConfig = serviceConfig;
     }
 
-    public List<Patient> getPatientsByName(String name) {
-        return patientRepository.findAllByName(name);
+    public List<Patient> getPatients() {
+        return patientRepository.findAll();
     }
 
     public Patient getPatientByIdentifier(String identifier) {

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.hunters.organizationservice.services.OrganizationService;
 
 @RestController
-@RequestMapping("/v1/organizations/")
+@RequestMapping("/v1/organizations")
 public class OrganizationServiceController {
 
     private final OrganizationService organizationService;
